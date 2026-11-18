@@ -11,7 +11,7 @@ kotlin = "2.4.21"
 composeBom = "2026.09.00"
 retrofit = "3.0.0"
 foundation = "1.12.1"
-navigation= "2.9.5"
+navigation = "2.9.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
