@@ -25,29 +25,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     containerColor = BackgroundDark) { innerPadding ->
 
-                    Greeting(
-                        name = "Android",
+                    Text(
+                        "Art Detective",
                         modifier = Modifier.padding(innerPadding),
+                        color = Color.White
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier,
-        color = Color.White
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ArtDetectiveTheme {
-        Greeting("Android")
     }
 }
