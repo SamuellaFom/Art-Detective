@@ -17,9 +17,9 @@ fun HomeScreen(onStartInvestigation: () -> Unit) {
         modifier = Modifier.fillMaxSize().padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Text("Accueil", style = MaterialTheme.typography.headlineMedium)
+        Text("Home", style = MaterialTheme.typography.headlineMedium)
         Button(onClick = onStartInvestigation) {
-            Text("Commencer l'enquête du jour")
+            Text("Start Investigation")
         }
     }
 }

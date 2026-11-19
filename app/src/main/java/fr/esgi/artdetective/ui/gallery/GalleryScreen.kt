@@ -1,6 +1,5 @@
 package fr.esgi.artdetective.ui.gallery
 
-import android.widget.Button
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -12,9 +11,11 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun GalleryScreen(onOpenInvestigation: (Int) -> Unit) {
-    Column(modifier = Modifier.fillMaxSize().padding(all = 24.dp)) {
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(all = 24.dp)) {
         Button(onClick = { onOpenInvestigation(2) }) {
-            Text("Commencer l'enquête du jour")
+            Text("Locked Work")
         }
     }
 }
