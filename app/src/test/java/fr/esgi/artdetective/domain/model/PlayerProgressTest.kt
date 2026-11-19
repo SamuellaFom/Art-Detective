@@ -6,24 +6,24 @@ import org.junit.Test
 class PlayerProgressTest {
 
     @Test
-    fun xp1240DonneInspecteur() {
+    fun xp1240InspectorGiver() {
         val progress = PlayerProgress(xp = 1240)
-        assertEquals(Rank.INSPECTEUR, progress.rank)
-        assertEquals(Rank.COMMISSAIRE, progress.rank.next)
+        assertEquals(Rank.INSPECTOR, progress.rank)
+        assertEquals(Rank.COMMISSAR, progress.rank.next)
     }
 
     @Test
-    fun nouveauJoueurEstApprenti() {
-        assertEquals(Rank.APPRENTI, PlayerProgress().rank)
+    fun newPlayerIsApprentice() {
+        assertEquals(Rank.APPRENTICE, PlayerProgress().rank)
     }
 
     @Test
-    fun aucuneTentativeDonneZeroPourcent() {
+    fun NoAttemptGiveZeroPercent() {
         assertEquals(0, PlayerProgress().successRate)
     }
 
     @Test
-    fun troisSurQuatreDonne75Pourcent() {
+    fun ThreeOutOfFourGives75Percent() {
         assertEquals(75, PlayerProgress(solvedCount = 3, attempts = 4).successRate)
     }
 }
