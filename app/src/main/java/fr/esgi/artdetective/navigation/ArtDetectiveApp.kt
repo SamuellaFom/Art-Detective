@@ -14,17 +14,21 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import fr.esgi.artdetective.data.repository.FakeArtworkRepository
+import fr.esgi.artdetective.domain.model.Artwork
 import fr.esgi.artdetective.ui.artist.ArtistScreen
 import fr.esgi.artdetective.ui.favorites.FavoritesScreen
 import fr.esgi.artdetective.ui.gallery.GalleryScreen
 import fr.esgi.artdetective.ui.home.HomeScreen
 import fr.esgi.artdetective.ui.investigation.InvestigationScreen
+import kotlinx.coroutines.runBlocking
 
 @Composable
 fun ArtDetectiveApp() {
     val navController = rememberNavController()
     val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
     val showBottomBar = BottomTab.entries.any { it.route == currentRoute }
+    val artworks: List<Artwork> = runBlocking { FakeArtworkRepository().getArtworks()}
 
     val selectTab: (BottomTab) -> Unit = { tab ->
         navController.navigate(tab.route) {
@@ -59,7 +63,7 @@ fun ArtDetectiveApp() {
                 HomeScreen(onStartInvestigation = { navController.navigate(Destinations.investigation(1)) })
             }
             composable(Destinations.GALLERY) {
-                GalleryScreen(onOpenInvestigation = { id -> navController.navigate(Destinations.investigation(id)) })
+                GalleryScreen(artworks, onOpenInvestigation = { id -> navController.navigate(Destinations.investigation(id)) })
             }
             composable(Destinations.FAVORITES) { FavoritesScreen() }
             composable(
