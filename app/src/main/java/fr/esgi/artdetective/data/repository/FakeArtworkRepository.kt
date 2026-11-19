@@ -4,7 +4,7 @@ import fr.esgi.artdetective.domain.model.Artist
 import fr.esgi.artdetective.domain.model.Artwork
 
 class FakeArtworkRepository : ArtworkRepository {
-    private val artworks = listOf(
+    private val artworks = listOf<Artwork>(
         Artwork(
             id = 6565,
             title = "American Gothic",
@@ -106,7 +106,7 @@ class FakeArtworkRepository : ArtworkRepository {
             imageUrl = image("defb4004-b500-218d-3d9b-9a02423f097d")
         )
     )
-    private val artists = listOf(
+    private val artists = listOf<Artist>(
         Artist(
             id = 36198,
             fullName = "Pablo Picasso",
