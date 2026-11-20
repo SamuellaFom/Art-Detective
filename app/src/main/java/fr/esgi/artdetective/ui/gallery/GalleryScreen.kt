@@ -8,14 +8,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import fr.esgi.artdetective.domain.model.Artwork
 
 @Composable
-fun GalleryScreen(onOpenInvestigation: (Int) -> Unit) {
+fun GalleryScreen(artworks: List<Artwork>, onOpenInvestigation: (Int) -> Unit) {
+
     Column(modifier = Modifier
         .fillMaxSize()
         .padding(all = 24.dp)) {
         Button(onClick = { onOpenInvestigation(2) }) {
             Text("Locked Work")
         }
+
+        ArtworkListScreen(artworks)
     }
 }
