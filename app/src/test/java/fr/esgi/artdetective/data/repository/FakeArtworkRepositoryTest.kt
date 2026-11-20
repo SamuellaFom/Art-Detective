@@ -7,7 +7,7 @@ import org.junit.Assert.assertTrue
 class FakeArtworkRepositoryTest {
 
     @Test
-    fun rechercheIgnoreLesMajuscules() = runBlocking {
+    fun searchIgnoresCase() = runBlocking {
         val results = FakeArtworkRepository().getArtworks(query = "seurat")
         assertTrue(results.isNotEmpty())
         assertTrue(results.all { it.artistName.contains("Seurat") })

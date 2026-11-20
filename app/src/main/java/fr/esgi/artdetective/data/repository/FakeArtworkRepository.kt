@@ -8,20 +8,20 @@ class FakeArtworkRepository : ArtworkRepository {
         Artwork(
             id = 6565,
             title = "American Gothic",
-            artistId = 37343,
+            artistId = 37343, // Grant Wood (et non 34996, qui est Hopper)
             artistName = "Grant Wood",
             year = "1930",
             style = "Realism",
-            country = "Cedar Rapids",
+            country = "United States",
             imageUrl = image("b272df73-a965-ac37-4172-be4e99483637")
         ),
         Artwork(
             id = 27992,
             title = "A Sunday on La Grande Jatte — 1884",
-            year = "1884–86,",
+            year = "1884–86",
             country = "France",
             artistId = 40810,
-             artistName = "Georges Seurat",
+            artistName = "Georges Seurat",
             style = "Pointillism",
             imageUrl = image("2d484387-2509-5e8e-2c43-22f9981972eb")
         ),
@@ -39,9 +39,9 @@ class FakeArtworkRepository : ArtworkRepository {
             id = 28560,
             title = "The Bedroom",
             year = "1889",
-            country = "Saint-Rémy-de-Provence",
+            country = "France",
             artistId = 40610,
-             artistName = "Vincent van Gogh",
+            artistName = "Vincent van Gogh",
             style = "Post-Impressionism",
             imageUrl = image("6644829f-f292-c5c4-a73c-0356a6fdbf0d")
         ),
@@ -49,9 +49,9 @@ class FakeArtworkRepository : ArtworkRepository {
             id = 20684,
             title = "Paris Street; Rainy Day",
             year = "1877",
-            country = "Paris",
+            country = "France",
             artistId = 3829,
-             artistName = "Gustave Caillebotte",
+            artistName = "Gustave Caillebotte",
             style = "Impressionism",
             imageUrl = image("f8fd76e9-c396-5678-36ed-6a348c904d27")
         ),
@@ -71,7 +71,7 @@ class FakeArtworkRepository : ArtworkRepository {
             year = "1893",
             country = "France",
             artistId = 33890,
-             artistName = "Mary Cassatt",
+            artistName = "Mary Cassatt",
             style = "Impressionism",
             imageUrl = image("3b885ae0-4d46-5fe4-d70a-00474827f02c")
         ),
@@ -81,7 +81,7 @@ class FakeArtworkRepository : ArtworkRepository {
             year = "1887",
             country = "Netherlands",
             artistId = 40610,
-             artistName = "Vincent van Gogh",
+            artistName = "Vincent van Gogh",
             style = "Post-Impressionism",
             imageUrl = image("47c5bcb8-62ef-e5d7-55e7-f5121f409a30")
         ),
@@ -91,7 +91,7 @@ class FakeArtworkRepository : ArtworkRepository {
             year = "1942",
             country = "United States",
             artistId = 34996,
-             artistName = "Edward Hopper",
+            artistName = "Edward Hopper",
             style = "Modernism",
             imageUrl = image("831a05de-d3f6-f4fa-a460-23008dd58dda")
         ),
@@ -101,7 +101,7 @@ class FakeArtworkRepository : ArtworkRepository {
             year = "1892–95",
             country = "France",
             artistId = 40869,
-             artistName = "Henri de Toulouse-Lautrec",
+            artistName = "Henri de Toulouse-Lautrec",
             style = "Post-Impressionism",
             imageUrl = image("defb4004-b500-218d-3d9b-9a02423f097d")
         )
@@ -112,22 +112,64 @@ class FakeArtworkRepository : ArtworkRepository {
             fullName = "Pablo Picasso",
             birthDeathYears = "1881 - 1973",
             origin = "Espagnol",
-            shortBio = "…"
+            shortBio = "Peintre et sculpteur espagnol, cofondateur du cubisme. Sa période bleue (1901-1904) est marquée par des tons froids et des sujets mélancoliques."
         ),
         Artist(
             id = 34996,
             fullName = "Edward Hopper",
             birthDeathYears = "1882 - 1967",
             origin = "Américain",
-            shortBio = "…"
+            shortBio = "Peintre réaliste américain, connu pour ses scènes de la vie urbaine marquées par la solitude et des jeux de lumière très travaillés."
         ),
         Artist(
-            id = 34996,
+            id = 37343,
             fullName = "Grant Wood",
-            birthDeathYears = "1882 - 1942",
+            birthDeathYears = "1891 - 1942",
             origin = "Américain",
-            shortBio = "…"
+            shortBio = "Peintre américain du mouvement régionaliste, célèbre pour « American Gothic » (1930), l'une des images les plus connues de l'art américain."
         ),
+        Artist(
+            id = 40810,
+            fullName = "Georges Seurat",
+            birthDeathYears = "1859 - 1891",
+            origin = "Français",
+            shortBio = "Peintre français, inventeur du pointillisme. Il construit ses tableaux avec de minuscules points de couleur pure, comme dans « Un dimanche à la Grande Jatte »."
+        ),
+        Artist(
+            id = 35809,
+            fullName = "Claude Monet",
+            birthDeathYears = "1840 - 1926",
+            origin = "Français",
+            shortBio = "Peintre français, figure majeure de l'impressionnisme. Il a consacré la fin de sa vie à la série des Nymphéas, peinte dans son jardin de Giverny."
+        ),
+        Artist(
+            id = 40610,
+            fullName = "Vincent van Gogh",
+            birthDeathYears = "1853 - 1890",
+            origin = "Néerlandais",
+            shortBio = "Peintre néerlandais du post-impressionnisme, connu pour ses couleurs intenses et ses coups de pinceau expressifs. Il a peint plus de 800 tableaux en une dizaine d'années."
+        ),
+        Artist(
+            id = 3829,
+            fullName = "Gustave Caillebotte",
+            birthDeathYears = "1848 - 1894",
+            origin = "Français",
+            shortBio = "Peintre français lié à l'impressionnisme, connu pour ses scènes parisiennes aux perspectives audacieuses. Il fut aussi un important mécène de ses amis artistes."
+        ),
+        Artist(
+            id = 33890,
+            fullName = "Mary Cassatt",
+            birthDeathYears = "1844 - 1926",
+            origin = "Américaine",
+            shortBio = "Peintre américaine installée en France, proche des impressionnistes. Elle est connue pour ses scènes intimes de mères et d'enfants."
+        ),
+        Artist(
+            id = 40869,
+            fullName = "Henri de Toulouse-Lautrec",
+            birthDeathYears = "1864 - 1901",
+            origin = "Français",
+            shortBio = "Peintre et affichiste français, observateur de la vie nocturne parisienne. Il a immortalisé le Moulin Rouge et ses artistes dans ses tableaux et ses affiches."
+        )
     )
 
     override suspend fun getArtworks(page: Int, query: String, style: String?): List<Artwork> =

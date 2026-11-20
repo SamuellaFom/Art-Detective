@@ -28,6 +28,7 @@ fun ArtDetectiveApp() {
     val navController = rememberNavController()
     val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
     val showBottomBar = BottomTab.entries.any { it.route == currentRoute }
+    // TODO: Fixer la variable "artwork" et enlever "runBlocking"
     val artworks: List<Artwork> = runBlocking { FakeArtworkRepository().getArtworks()}
 
     val selectTab: (BottomTab) -> Unit = { tab ->
