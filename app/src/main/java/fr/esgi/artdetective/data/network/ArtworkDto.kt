@@ -28,10 +28,10 @@ fun ArtworkDto.toDomainOrNull(): Artwork? {
         id = validId,
         title = validTitle,
         artistId = validArtistId,
-        artistName = artistTitle ?: "Unknown artist",
-        year = dateDisplay ?: "Unknown date",
-        style = styleTitle ?: "Unknown style",
-        country = placeOfOrigin ?: "Unknown country",
+        artistName = artistTitle ?: "Artiste inconnu",
+        year = dateDisplay ?: "Date inconnue",
+        style = styleTitle ?: "Style inconnu",
+        country = placeOfOrigin ?: "Pays inconnu",
         imageUrl = imageUrlFor(validImageId)
     )
 }

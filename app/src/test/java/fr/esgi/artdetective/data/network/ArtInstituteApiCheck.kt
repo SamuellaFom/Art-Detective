@@ -1,11 +1,11 @@
 package fr.esgi.artdetective.data.network
 
-import junit.framework.TestCase.assertEquals
+import org.junit.Assert.assertEquals
 import kotlinx.coroutines.runBlocking
 import org.junit.Ignore
 import org.junit.Test
 
-//@Ignore("Calls the real API: to be launched manually")
+@Ignore("Calls the real API: to be launched manually")
 class ArtInstituteApiCheck {
     @Test
     fun fetchesLaGrandeJatte() = runBlocking {
