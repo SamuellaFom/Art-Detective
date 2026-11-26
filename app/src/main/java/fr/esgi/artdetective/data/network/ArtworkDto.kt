@@ -7,6 +7,9 @@ data class ArtworkResponseDto(
     val data: ArtworkDto?
 )
 
+data class ArtworksResponseDto(
+    val data: List<ArtworkDto>
+)
 data class ArtworkDto(
     val id: Int?,
     val title: String?,
@@ -35,6 +38,5 @@ fun ArtworkDto.toDomainOrNull(): Artwork? {
         imageUrl = imageUrlFor(validImageId)
     )
 }
-
 fun imageUrlFor(imageId: String): String =
     "https://www.artic.edu/iiif/2/$imageId/full/843,/0/default.jpg"
