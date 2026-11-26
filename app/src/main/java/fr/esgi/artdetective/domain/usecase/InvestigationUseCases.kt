@@ -39,7 +39,6 @@ class SubmitAnswerUseCase(private val progressRepository: ProgressRepository) {
 
         progressRepository.recordAnswer(investigation.artwork.id, correct, xp)
         return AnswerResult(correct = correct, xpEarned = xp)
-
     }
 
     companion object {
