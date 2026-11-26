@@ -46,5 +46,4 @@ class SubmitAnswerUseCase(private val progressRepository: ProgressRepository) {
         const val BASE_XP = 120
         const val HINT_COST = 20
     }
-
 }

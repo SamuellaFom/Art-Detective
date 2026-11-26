@@ -60,5 +60,4 @@ class InvestigationUseCasesTest {
         assertEquals(0, result.xpEarned)
         assertEquals(1, progress.progress.value.attempts)
     }
-
 }
