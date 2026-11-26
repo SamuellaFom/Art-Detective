@@ -2,6 +2,7 @@ package fr.esgi.artdetective.domain.usecase
 
 import fr.esgi.artdetective.data.repository.ArtworkRepository
 import fr.esgi.artdetective.data.repository.ProgressRepository
+import fr.esgi.artdetective.domain.model.AnswerResult
 import fr.esgi.artdetective.domain.model.Investigation
 
 class StartInvestigationUseCase(private val artworkRepository: ArtworkRepository) {
@@ -30,11 +31,6 @@ class RevealHintUseCase {
         return investigation.copy(revealedHints = revealed)
     }
 }
-
-data class AnswerResult(
-    val correct: Boolean,
-    val xpEarned: Int
-)
 
 class SubmitAnswerUseCase(private val progressRepository: ProgressRepository) {
     operator fun invoke(investigation: Investigation, answer: String): AnswerResult {
